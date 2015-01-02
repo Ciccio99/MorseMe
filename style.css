@@ -1,0 +1,12 @@
+
+#Top_Title h1{
+	
+}
+
+.Container{
+	width: 525px;
+}
+
+.Container textarea{
+	min-width: 100%;
+}
