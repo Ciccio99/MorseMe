@@ -47,14 +47,28 @@ var morseDict = {
 	"7" : "--...",
 	"8" : "---..",
 	"9" : "----.",
-	" " : "  "
+	" " : "  ",
+	"." : ".-.-.-",
+	"," : "--..--",
+	":" : "---...",
+	"?" : "..--..",
+	"'" : ".----.",
+	"-" : "-....-",
+	"/" : "-..-.",
+	"(" : "-.--.-",
+	")" : "-.--.-",
+	'"' : ".-..-.",
+	"@" : ".--.-.",
+	"=" : "-...-"
 };
 
 var TranslateText = function(text){
 	var morseCode = '';
 	for(var i = 0; i < text.length; i++){
 		var letter = text[i];
-		morseCode += morseDict[letter.toUpperCase()] + " ";
+		var morse = morseDict[letter.toUpperCase()];
+		if(morse != null)
+			morseCode +=  morse + " ";
 	}
 	return morseCode;
 };
